@@ -1,4 +1,4 @@
-# AR.Drone basic control
+# AR.Drone nonlinear control (Gazebo Version)
 This repository contains 4 ROS packages. 
 
 Three have been downloaded - ardrone_autonomy, tum_ardrone and tum_simulator. 
@@ -14,9 +14,15 @@ this package connects the entire AR Drone system to the ROS environment giving y
 
 This package cpntains node (ardrone_test_node - with code in waypoint_nav.cpp file) that contains subscribers that subscribe to all the above topics published by the ardrone_autonomy node. This data (accelerometer, magnetometer, gyroscope, camera, gps, etc) can then be processed in this node. 
 
-This node also contains publishers that publish takeoff, land and drone control commands to /ardrone/takeoff, /ardrone/land and /cmd_vel topics. These publishers can be utilised through takeoff(), land() and move(lx,ly,lz,rx,ry,rz) fucntions. For simplicity and ease of use, running this node will open up a menu allowing you to press keyboard buttons to takeoff, land and perform basic movements (left, right, up, down, yaw). (https://drive.google.com/open?id=0B3_gyQ1dIf-QTmE5Z200Y3JmVGc)
+It also contains a subscriber that subscribes to /ground_truth/state to obtain pose and attitude values from ground observer in Gazebo.
 
-##### All further code (to manipulate drone some way by sending control commands) shall be written here in ardrone_test_node (i.e. inside waypoint_nav.cpp file)
+This node also contains publishers that publish takeoff, land and drone control commands to /ardrone/takeoff, /ardrone/land and /cmd_vel topics. These publishers can be utilised through takeoff(), land() and move(lx,ly,lz,rx,ry,rz) fucntions. 
+
+For simplicity and ease of use, running this node will open up a menu, where - 
+(1) If you choose option m - it will allow you to press keyboard buttons to takeoff, land and perform basic movements (left, right, up, down, yaw). 
+(2) If you choose option t (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp
+
+(https://drive.google.com/open?id=0B3_gyQ1dIf-QTmE5Z200Y3JmVGc)
 
 ### 3. tum_ardrone [used only drone_gui node] (downloaded)
 
