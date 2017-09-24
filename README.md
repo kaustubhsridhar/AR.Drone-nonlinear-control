@@ -1,4 +1,4 @@
-# AR.Drone_basic_control
+# AR.Drone control
 This repository contains 4 ROS packages. 
 
 Three have been downloaded - ardrone_autonomy, tum_ardrone and tum_simulator. 
