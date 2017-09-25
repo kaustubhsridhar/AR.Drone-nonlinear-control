@@ -22,7 +22,7 @@ This node also contains publishers that publish takeoff, land and drone control 
 
 For simplicity and ease of use, running this node will open up a menu, where - 
 (1) If you choose option m - it will allow you to press keyboard buttons to takeoff, land and perform basic movements (left, right, up, down, yaw). 
-(2) If you choose option t (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp
+(2) If you choose option t (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp)
 
 (https://drive.google.com/open?id=0B3_gyQ1dIf-QTmE5Z200Y3JmVGc)
 
