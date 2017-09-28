@@ -26,7 +26,9 @@ For simplicity and ease of use, running this node will open up a menu, where -
 
 (https://drive.google.com/open?id=0B3_gyQ1dIf-QTmE5Z200Y3JmVGc)
 
-The below image shows the desired trajectory (blue) and actual trajectory (red) traversed by ardrone on running this code (how to run is below)
+The below image shows the desired trajectory (blue) and actual trajectory (red) traversed by ardrone on running this code (how to run is further below) 
+
+(https://drive.google.com/open?id=0B3_gyQ1dIf-QUC05czBWVW90azQ)
 
 ### 3. tum_ardrone [used only drone_gui node] (downloaded)
 
