@@ -26,6 +26,8 @@ For simplicity and ease of use, running this node will open up a menu, where -
 
 (https://drive.google.com/open?id=0B3_gyQ1dIf-QTmE5Z200Y3JmVGc)
 
+The below image shows the desired trajectory (blue) and actual trajectory (red) traversed by ardrone on running this code (how to run is below)
+
 ### 3. tum_ardrone [used only drone_gui node] (downloaded)
 
 Running this node will open a simple GUI for controlling the drone (i.e. move up, down, left, right, takeoff and land). This GUI is an alternate option to perform basic movements and to land in case of emergencies. (http://wiki.ros.org/tum_ardrone/drone_gui)
@@ -57,7 +59,7 @@ rosrun ardrone_test ardrone_test_node
 ```
 rosrun tum_ardrone drone_gui
 ```
-## Running a simulation of AR.Drone 2.0 on Gazebo
+## Running a simulation of AR.Drone 2.0 traversing alond predefined trajectory (8 shape) on Gazebo
 Run the following code lines in different terminals
 
 ```
@@ -69,6 +71,13 @@ roslaunch cvg_sim_gazebo ardrone_testworld.launch
 ```
 rosrun ardrone_test ardrone_test_node
 ```
+Now, press w to takeoff
+```
+rosrun ardrone_test ardrone_test_node
+```
+Press t to start trajectory tracking. (data of desired and actual positions can be saved and plotted)
+
 ```
 rosrun tum_ardrone drone_gui
 ```
+^ above is unnecessary normally
