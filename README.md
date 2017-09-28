@@ -1,6 +1,8 @@
 # AR.Drone nonlinear control (Gazebo Version)
 This repository contains 4 ROS packages. 
 
+Which have been used to implement backstepping control (as described in https://drive.google.com/open?id=0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU) to make the AR Drone trace a particular trajectory in a Gazebo simulation.
+
 Three have been downloaded - ardrone_autonomy, tum_ardrone and tum_simulator. 
 
 One was created by me - ardrone_test.
