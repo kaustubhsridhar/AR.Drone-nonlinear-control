@@ -48,21 +48,6 @@ cd catkin_ws/
 ```
 catkin_make
 ```
-## Running the code on the actual AR.Drone 2.0
-Run the following code lines in different terminals
-
-```
-roscore
-```
-```
-rosrun ardrone_autonomy ardrone_driver _navdata_demo:=0
-```
-```
-rosrun ardrone_test ardrone_test_node
-```
-```
-rosrun tum_ardrone drone_gui
-```
 ## Running a simulation of AR.Drone 2.0 traversing alond predefined trajectory (8 shape) on Gazebo
 Run the following code lines in different terminals
 
