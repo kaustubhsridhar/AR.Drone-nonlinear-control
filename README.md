@@ -40,8 +40,19 @@ Running this node will open a simple GUI for controlling the drone (i.e. move up
 
 This package contains the implementation of a gazebo simulator for the Ardrone 2.0 . (http://wiki.ros.org/tum_simulator)
 
-## Builidng the code (after downloading into catkin_ws folder in home directory)
-Run the following code lines in different terminals
+## Downloading/Installing the code
+Run the following code lines in a terminal
+```
+mkdir catkin_ws/
+```
+```
+cd catkin_ws/
+```
+```
+git clone https://github.com/kaustubhsridhar/AR.Drone-nonlinear-control-Gazebo-Simulation.git
+```
+## Builidng the code 
+Run the following code lines in a terminal
 ```
 cd catkin_ws/
 ```
