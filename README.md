@@ -51,6 +51,7 @@ cd catkin_ws/
 ```
 git clone https://github.com/kaustubhsridhar/AR.Drone-nonlinear-control-Gazebo-Simulation.git
 ```
+(note that the src folder should be directly in the catkin_ws folder. delete any unnecessary folder created by git cloning)
 ```
 catkin_make --pkg ardrone_autonomy
 ```
