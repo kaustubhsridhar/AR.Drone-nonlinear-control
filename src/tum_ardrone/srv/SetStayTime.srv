@@ -1,6 +1,0 @@
-# Request: time to stay to validate reach
-float32 duration
----
-# Responce: ok | ko
-bool status
-
