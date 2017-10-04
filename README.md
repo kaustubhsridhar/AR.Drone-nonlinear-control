@@ -51,6 +51,15 @@ cd catkin_ws/
 ```
 git clone https://github.com/kaustubhsridhar/AR.Drone-nonlinear-control-Gazebo-Simulation.git
 ```
+```
+catkin_make --pkg ardrone_autonomy
+```
+```
+catkin_make --pkg ardrone_test
+```
+```
+catkin_make --pkg tum_ardrone
+```
 ## Builidng the code 
 Run the following code lines in a terminal
 ```
