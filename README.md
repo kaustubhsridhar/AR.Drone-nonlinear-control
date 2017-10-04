@@ -1,13 +1,13 @@
 # AR.Drone nonlinear control (Gazebo Version)
-This repository contains 4 ROS packages. 
+This repository contains 3 ROS packages. 
 
 Which have been used to implement backstepping control (as described in https://drive.google.com/open?id=0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU) to make the AR Drone trace a particular trajectory in a Gazebo simulation.
 
-Three have been downloaded - ardrone_autonomy, tum_ardrone and tum_simulator. 
+Two have been downloaded - ardrone_autonomy and tum_simulator. 
 
 One was created by me - ardrone_test.
 
-## Description of contents of 4 packages
+## Description of contents of the 3 packages
 ### 1. ardrone_autonomy (downloaded)
 
 this package connects the entire AR Drone system to the ROS environment giving you the control of the motion of the drone (by sunscribing to topics like /ardrone/takeoff, /ardrone/land, /cmd_vel to which you can publish takeoff, land and control commands resp.)
@@ -30,11 +30,7 @@ The below video shows an implementation of this code (notice the green trajector
 
 (https://drive.google.com/open?id=0B3_gyQ1dIf-QUC05czBWVW90azQ)
 
-### 3. tum_ardrone [used only drone_gui node] (downloaded)
-
-Running this node will open a simple GUI for controlling the drone (i.e. move up, down, left, right, takeoff and land). This GUI is an alternate option to perform basic movements and to land in case of emergencies. (http://wiki.ros.org/tum_ardrone/drone_gui)
-
-### 4. tum_simulator (downloaded)
+### 3. tum_simulator (downloaded)
 
 This package contains the implementation of a gazebo simulator for the Ardrone 2.0 . (http://wiki.ros.org/tum_simulator)
 
@@ -50,15 +46,7 @@ cd catkin_ws/
 git clone https://github.com/kaustubhsridhar/AR.Drone-nonlinear-control-Gazebo-Simulation.git
 ```
 (note that the src folder should be directly in the catkin_ws folder. delete any unnecessary folder created by git cloning)
-```
-catkin_make --pkg ardrone_autonomy
-```
-```
-catkin_make --pkg ardrone_test
-```
-```
-catkin_make --pkg tum_ardrone
-```
+
 ## Builidng the code 
 Run the following code lines in a terminal
 ```
@@ -84,8 +72,3 @@ Now, press w to takeoff
 rosrun ardrone_test ardrone_test_node
 ```
 Press t to start trajectory tracking. (data of desired and actual positions can be saved and plotted)
-
-```
-rosrun tum_ardrone drone_gui
-```
-^ above is unnecessary normally
