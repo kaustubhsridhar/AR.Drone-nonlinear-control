@@ -28,7 +28,7 @@ For simplicity and ease of use, running this node will open up a menu, where -
 
 ![Alt text](https://raw.github.com/kaustubhsridhar/AR.Drone-basic-control/master/basic_menu.png "menu shown on running ardrone_test_node node")
 
-The below image shows the desired trajectory (blue) and actual trajectory (red) traversed by ardrone on running this code (how to run is further below) 
+The below video shows an implementation of this code (notice the green trajectory (actual) tracking the red trajectory (desired))- 
 
 (https://drive.google.com/open?id=0B3_gyQ1dIf-QUC05czBWVW90azQ)
 
