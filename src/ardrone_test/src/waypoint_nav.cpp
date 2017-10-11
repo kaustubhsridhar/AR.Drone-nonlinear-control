@@ -90,9 +90,7 @@ void hover(int timee);		// hovering
 void takeoff();		// take off
 void land();		//landing
 void move(float lx, float ly, float lz, float ax, float ay, float az ); // publishing command velocity
-void moveup(double z_d);
 // Basic Navigation func
-void yawing(double angle);				// yawing movements
 void basic_movement();
 // advanced control functions
 void traj_track();
@@ -538,64 +536,6 @@ void move(float lx, float ly, float lz, float ax, float ay, float az )
 
 }
 
-void moveup(double z_d)
-{
-	//Measuring t : current time
-	double t0 = ros::Time::now().toSec(); //ros has a 'Time' function in which the current time can be found by using 'now'.                                         							we need time in sec to compute hence 'tosec'
-
-	double e_z, z =0, i=0 ,z0 ,r = 1, x, y, x0, y0, Vx, Vy, e_x, e_y;
-
-	z0 = drone_navdata.altd*0.001;
-
-	ros::Rate loop_rate(f);
-
-	z = z0;
-	ofstream myfile;
-	myfile.open("/home/icgel/mov_test.txt", ios::out | ios::app );
-	//myfile<<"Entering the loop";
-
-	do{
-		e_z = z - z_d;
-
-		double t1=ros::Time::now().toSec();
-
-		if((abs(e_z) > 0.5 && z > 0))
-		{
-			double z = drone_navdata.altd*0.001;
-					lx = 0;
-					ly = 0;
-					lz = -0.7*(z-z_d);
-			//cout<<"Cmd_vel"<<lx<<setw(10)<<ly<<setw(10)<<lz<<endl;
-		}
-		else
-		{
-			lx =0;
-			ly =0;
-			lz = 0;
-			//break;
-		}
-
-		myfile<<endl<<i<<setw(20);
-		myfile<<drone_navdata.header.stamp<<setw(50);
-
-		cout<<"height"<<z<<endl;
-
-		move(lx, ly, lz, 0, 0, 0);
-
-
-		z = drone_navdata.altd*0.001;
-
-		i = i+1;
-
-		ros::spinOnce(); //if this function is not mentioned the function will stay in the buffer and cannot be able to publish
-		loop_rate.sleep();
-
-		}while(abs(e_z)>0.5 && ros::ok());
-		myfile.close();
-
-}
-
-
 void record()
 {
 	double t0=ros::Time::now().toSec();
@@ -645,27 +585,4 @@ void record()
 		}while(i<10000);
 		myfile.close();
 		land();
-}
-
-void yawing(double angle)
-{
-	angle = angle + drone_navdata.rotZ;
-
-		double error;
-		ros::Rate loop_rate(10);
-		do{
-
-			//velocity_publisher.publish(vel_msg);
-
-			error = (angle - drone_navdata.rotZ);
-			cout<< "Yawwwwwwwwwwwwwww"<<drone_navdata.rotZ<<endl;
-			vel_msg.angular.z = 0.1 * deg2rad(error);
-
-			ros::spinOnce(); //if this function is not mentioned the function will stay in the buffer and cannot be able to publish
-			loop_rate.sleep();
-
-		}while((abs(error) > 5) && (ros::ok()));
-
-		vel_msg.angular.z = 0;
-		velocity_publisher.publish(vel_msg);
 }
