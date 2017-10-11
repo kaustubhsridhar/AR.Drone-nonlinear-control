@@ -16,7 +16,11 @@ It also publishes the IMU, magnetometer and navigation (attitudes, velocities, p
 
 ### 2. ardrone_test (created by me)
 
-This package cpntains node (ardrone_test_node - with code in waypoint_nav.cpp file) that contains subscribers that subscribe to all the above topics published by the ardrone_autonomy node. This data (accelerometer, magnetometer, gyroscope, camera, gps, etc) can then be processed in this node. 
+This package contains
+1) src folder and CMakeLists.txt file
+2) src/waypoint_nav.cpp file
+
+Basically, this package contains a node (ardrone_test_node - with code in src/waypoint_nav.cpp file) that contains subscribers that subscribe to all the above topics published by the ardrone_autonomy node. This data (accelerometer, magnetometer, gyroscope, camera, gps, etc) can then be processed in this node. 
 
 It also contains a subscriber that subscribes to /ground_truth/state to obtain pose and attitude values from ground observer in Gazebo.
 
