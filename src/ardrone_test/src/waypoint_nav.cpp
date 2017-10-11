@@ -34,16 +34,8 @@ ros::Publisher velocity_publisher;		// velocity publisher
 
 // Variables for Subscribing
 ros::Subscriber pose_subscriber;		// ardrone navdata subsciber
-ros::Subscriber gps_subscriber;		// ardrone navdata subsciber
-ros::Subscriber imu_subscriber;		// ardrone navdata subsciber
-ros::Subscriber est_sub;		// ardrone navdata subsciber
-ros::Subscriber INS_K_est;		// ardrone navdata subsciber
-ros::Subscriber joy_sub_;
-ros::Subscriber num_sub;
-ros::Subscriber new_gps_sub;
-ros::Subscriber test_sub;
-ros::Subscriber odo_subscriber;
-ros::Subscriber sim_state_sub; //getting state from gazebo simulator
+ros::Subscriber gps_subscriber;		// ardrone gps data subsciber
+ros::Subscriber imu_subscriber;		// ardrone imu data subsciber
 
 // Variables for Service
 ros::ServiceClient client1;		// ardrone camera service
@@ -360,58 +352,6 @@ void gpsCallback(const ardrone_autonomy::navdata_gps::ConstPtr & gps_message)
 	lat	= 	gps_message->lat_fused;
 	lon 	= 	gps_message->long_fused;
 	ele 	= 	gps_message->elevation;
-}
-
-void new_gpsCallback(const std_msgs::String::ConstPtr& gps1)
-{
-	if (gps_cntr == 0)
-	{
-		stringstream(gps1->data.c_str()) >> new_lat;
-		gps_cntr=1;
-	}
-
-	else if (gps_cntr==1)
-	{
-		stringstream(gps1->data.c_str()) >> new_lon;
-		gps_cntr=0;
-	}
-}
-
-void NumCallback(const ardrone_test::Drone_odo::ConstPtr& val)
-{
-	//cout<<"TaRgOt:"<< val->x<< val->y;
-	redX = val->x;
-	redY = val->y;
-}
-
-void EstCallback(const ardrone_test::est_co::ConstPtr& est)
-{
-  //cout<<"Target:"<< val->x<< val->y;
-	est_x = est->z;
-	est_y = est->y;
-	est_z = est->x;
-	kinect_ready = est->x;
-	//cout<<"Target:"<< est_x<< setw(25)<<est_y<<setw(25) << est_z;
-}
-
-void INS_K_Callback(const ardrone_test::est_co::ConstPtr& esti)
-{
-  //cout<<"Target:"<< val->x<< val->y;
-	K_est_x = esti->x;
-	K_est_y = esti->y;
-	K_est_z = esti->z;
-	//ROS_INFO("hi = %f, %f ",K_est_x,K_est_y);
-	//cout<<"Target:"<< est_x<< setw(25)<<est_y<<setw(25) << est_z;
-}
-
-void testdataCallback(const ardrone_autonomy::vector31::ConstPtr & test )
-{
-  //cout<<"Target:"<< val->x<< val->y;
-	test_x = -test->z;
-	test_y = test->y;
-	test_z = test->x;
-	//ROS_INFO("hi = %f, %f ",K_est_x,K_est_y);
-	//cout<<"Target:"<< est_x<< setw(25)<<est_y<<setw(25) << est_z;
 }
 
 void joyCallback(const sensor_msgs::Joy::ConstPtr & joy )
