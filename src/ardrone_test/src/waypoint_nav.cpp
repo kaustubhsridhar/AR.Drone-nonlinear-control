@@ -107,12 +107,9 @@ int main(int argc, char **argv)
 	pose_subscriber = n.subscribe("/ardrone/navdata", 200, poseCallback);	//initialize to receive processed sensor data
 	imu_subscriber = n.subscribe("/ardrone/imu", 200, imuCallback); //initialize to receive raw sensor data
 	gps_subscriber = n.subscribe("/ardrone/navdata_gps", 10, gpsCallback); //initialize to receive gps data
-	est_sub = n.subscribe("Coordinate", 100, EstCallback); //initialize to receive ground cam target data
-	INS_K_est = n.subscribe("/estimation_data", 200, INS_K_Callback); //initialize to receive kinect+ uav sensor estimation sensor data
-	test_sub = n.subscribe("/test", 100, testdataCallback);
 	//gazebo simulation subscribers
 	sim_state_sub = n.subscribe("/ground_truth/state",10,SimStateCallback);
-	num_sub = n.subscribe("/chatter1", 100, NumCallback);
+	//jpy sub
 	joy_sub_ = n.subscribe<sensor_msgs::Joy>("/joy", 10, joyCallback);
 
 while(ros::ok())
