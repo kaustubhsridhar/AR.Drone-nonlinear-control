@@ -89,6 +89,9 @@ roscore
 roslaunch vicon_bridge vicon.launch
 ```
 ```
+rosrun ardrone_autonomy ardrone_driver
+```
+```
 rosrun ardrone_test ardrone_test_node
 ```
 Now, press w to takeoff
