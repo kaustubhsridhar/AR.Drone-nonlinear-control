@@ -29,7 +29,7 @@ For simplicity and ease of use, running this node will open up a menu, where -
 
 The below video shows an implementation of this code in a Gazebo simulation (notice the green trajectory (actual) tracking the red trajectory (desired))- 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Bcu3NSuPaPY" target="_blank"><img src="http://img.youtube.com/vi/Bcu3NSuPaPY/0.jpg" alt="Gazebo Simulation of Backstepping Control on Parrot AR.Drone 2.0" width="600" height="400" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Bcu3NSuPaPY" target="_blank"><img src="http://img.youtube.com/vi/Bcu3NSuPaPY/0.jpg" alt="Gazebo Simulation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
 
 ### 3. tum_simulator (downloaded)
 
