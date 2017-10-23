@@ -27,7 +27,7 @@ For simplicity and ease of use, running this node will open up a menu, where -
 (2) If you choose option t (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory in Gazebo. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp)
 (3) If you choose option v (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory IRL using VICON's help. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp)
 
-The below video shows an implementation of this code in a Gazebo simulation (notice the green trajectory (actual) tracking the red trajectory (desired))- 
+#### Click on the below image to see a video that shows an implementation of this code in a Gazebo simulation (notice the green trajectory (actual) tracking the red trajectory (desired))- 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Bcu3NSuPaPY" target="_blank"><img src="http://img.youtube.com/vi/Bcu3NSuPaPY/0.jpg" alt="Gazebo Simulation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
 
@@ -59,6 +59,10 @@ cd catkin_ws/
 ```
 ```
 catkin_make
+```
+Run the below line only once (after the first compilation). It adds the workspace to the search path.
+```
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc 
 ```
 ## Running a simulation of AR.Drone 2.0 traversing along predefined trajectory (8 shape) on Gazebo
 Run the following code lines in different terminals
