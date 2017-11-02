@@ -1,7 +1,7 @@
 # AR.Drone nonlinear control 
 This repository contains 4 ROS packages. 
 
-Which have been used to implement backstepping control (as described in https://drive.google.com/open?id=0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU) to make the AR Drone trace a particular trajectory in a Gazebo simulation and in real life (with a VICON Motion Capture system)
+Which have been used to implement backstepping control (as described in https://drive.google.com/open?id=0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU) to make the AR Drone trace a particular trajectory in a Gazebo simulation and in real life (with a VICON Motion Capture system) It also uses the same controller to follow an RC Car.
 
 ## Description of contents of the 4 packages
 ### 1. ardrone_autonomy (downloaded)
@@ -30,6 +30,14 @@ For simplicity and ease of use, running this node will open up a menu, where -
 #### Click on the below image to see a video that shows an implementation of this code in a Gazebo simulation (notice the green trajectory (actual) tracking the red trajectory (desired))- 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Bcu3NSuPaPY" target="_blank"><img src="http://img.youtube.com/vi/Bcu3NSuPaPY/0.jpg" alt="Gazebo Simulation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
+
+#### Click on the below image to see a video that shows a real life implementation of the AR Drone tracking an 8 shape trajectory (using VICON)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=DCzn9Angy2s" target="_blank"><img src="http://img.youtube.com/vi/DCzn9Angy2s/0.jpg" alt="Real life implementation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
+
+#### Click on the below image to see a video that shows the AR Drone following an RC Car using the same controller (using VICON)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=" target="_blank"><img src="http://img.youtube.com/vi//0.jpg" alt="Real life implementation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
 
 ### 3. tum_simulator (downloaded)
 
