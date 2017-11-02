@@ -37,7 +37,7 @@ For simplicity and ease of use, running this node will open up a menu, where -
 
 #### Click on the below image to see a video that shows the AR Drone following an RC Car using the same controller (using VICON)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=" target="_blank"><img src="http://img.youtube.com/vi//0.jpg" alt="Real life implementation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=riiJ3pi4EY8" target="_blank"><img src="http://img.youtube.com/vi/riiJ3pi4EY8/0.jpg" alt="Real life implementation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
 
 ### 3. tum_simulator (downloaded)
 
