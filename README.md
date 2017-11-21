@@ -27,6 +27,8 @@ For simplicity and ease of use, running this node will open up a menu, where -
 (2) If you choose option t (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory in Gazebo. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp)
 (3) If you choose option v (obviously after takeoff(option w)) - the nonlinear control will make it trace a predefined trajectory IRL using VICON's help. (note: the code for control law implementation, predefined desired trajectory - can be found in function "traj_track()" in ardrone_test/src/waypoint_nav.cpp)
 
+![Alt text](https://raw.github.com/kaustubhsridhar/AR.Drone-nonlinear-control/master/menu_img.png "menu shown on running ardrone_test_node node")
+
 #### Click on the below image to see a video that shows an implementation of this code in a Gazebo simulation (notice the green trajectory (actual) tracking the red trajectory (desired))- 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Bcu3NSuPaPY" target="_blank"><img src="http://img.youtube.com/vi/Bcu3NSuPaPY/0.jpg" alt="Gazebo Simulation of Backstepping Control on Parrot AR.Drone 2.0" width="480" height="360" border="0" /></a>
