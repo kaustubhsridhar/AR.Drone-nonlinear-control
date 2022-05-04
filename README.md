@@ -1,7 +1,7 @@
 # AR.Drone nonlinear control 
 This repository contains 4 ROS packages. 
 
-Which have been used to implement backstepping control (as described in [this report](https://drive.google.com/file/d/0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU/view?usp=drivesdk&resourcekey=0-ZZI9-CjLFfEgdg7H56zr8g)) to make the AR Drone trace a particular trajectory in a Gazebo simulation and in real life (with a VICON Motion Capture system) It also uses the same controller to follow an RC Car.
+Which have been used to implement backstepping control (as described in [this paper](https://drive.google.com/file/d/0B3_gyQ1dIf-QdWE2S3BIQ3p1UVU/view?usp=drivesdk&resourcekey=0-ZZI9-CjLFfEgdg7H56zr8g)) to make the AR Drone trace a particular trajectory in a Gazebo simulation and in real life (with a VICON Motion Capture system) It also uses the same controller to follow an RC Car.
 
 ## Description of contents of the 4 packages
 ### 1. ardrone_autonomy (downloaded)
